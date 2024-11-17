@@ -27,7 +27,7 @@
   padding: 20px;
   @media (min-width: getBreakpoint("desktop")) {
     min-width: 800px;
-    max-width: 1300px;
+    max-width: 900px;
     width: 40%;
   }
 }
@@ -47,7 +47,7 @@
   width: 50%;
   @media (min-width: getBreakpoint("desktop")) {
     width: 40%;
-    max-height: 350px;
+    max-height: 250px;
   }
 }
 
