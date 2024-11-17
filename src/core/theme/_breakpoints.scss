@@ -1,0 +1,9 @@
+@use "sass:map";
+
+$breakpoints: (
+  desktop: 992px,
+);
+
+@function getBreakpoint($breakpoint) {
+  @return map.get($breakpoints, $breakpoint);
+}

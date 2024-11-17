@@ -1,0 +1,16 @@
+@use "src/core/theme" as *;
+
+.mainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: color("mainButtonColor");
+  cursor: pointer;
+  font-weight: bold;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 16px;
+  }
+}

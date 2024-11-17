@@ -1,0 +1,43 @@
+@use "src/core/theme" as *;
+
+.paginationContainer {
+  font-size: 15px;
+  color: color('mainTextColor');
+  margin: 10px;
+  display: flex;
+  column-gap: 10px;
+  font-weight: bold;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 20px;
+  }
+}
+
+.currentPageButton {
+  font-size: 15px;
+  background-color: color('mainButtonColor');
+  border-radius: 2px;
+  padding: 5px 10px 5px 10px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 20px;
+  }
+}
+.pageButton {
+  font-size: 15px;
+  margin: 0 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 20px;
+  }
+}
+
+.paginationEllipsis {
+  margin: 0 5px;
+  cursor: default;
+}

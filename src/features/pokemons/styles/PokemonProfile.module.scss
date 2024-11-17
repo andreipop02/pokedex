@@ -1,0 +1,167 @@
+@use "src/core/theme" as *;
+
+.mainWrapper {
+  background-color: color("backgroundColor");
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+  @media (min-width: getBreakpoint("desktop")) {
+    padding: 30px 0 30px 0;
+  }
+}
+
+.pokemonProfileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: color("secondaryColor");
+  width: 80%;
+  max-width: 450px;
+  border-radius: 10px;
+  padding: 20px;
+  @media (min-width: getBreakpoint("desktop")) {
+    min-width: 800px;
+    max-width: 1300px;
+    width: 40%;
+  }
+}
+
+.basicInfosContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  @media (min-width: getBreakpoint("desktop")) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.pokemonImage {
+  width: 50%;
+  @media (min-width: getBreakpoint("desktop")) {
+    width: 40%;
+    max-height: 350px;
+  }
+}
+
+.pokemonName {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 40px;
+  }
+}
+
+.infosContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  row-gap: 10px;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 22px;
+  }
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.statsTitle {
+  align-self: center;
+  font-weight: bold;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 28px;
+  }
+}
+
+.statRow {
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 22px;
+    width: 50%;
+    align-self: center;
+  }
+}
+
+.statName {
+  text-transform: capitalize;
+}
+
+.infosListContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: flex-start;
+  margin-top: 20px;
+  column-gap: 5px;
+  font-size: 13px;
+  width: 100%;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 22px;
+    justify-content: center;
+  }
+}
+
+.pokemonInfo {
+  background-color: color("listColor1");
+  border-radius: 10px;
+  padding: 3px 5px 3px 5px;
+  text-align: center;
+  font-size: 11px;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 20px;
+    border-radius: 15px;
+  }
+}
+
+.experienceStat {
+  font-size: 13px;
+  align-self: flex-start;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 22px;
+    align-self: center;
+  }
+}
+
+.pokemonExpGain {
+  @extend .pokemonInfo;
+  background-color: color("listColor2");
+  margin-left: 5px;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 20px;
+  }
+}
+
+.errorText {
+  color: color("errorColor");
+  font-size: 23px;
+  text-align: center;
+  width: 80%;
+  @media (min-width: getBreakpoint("desktop")) {
+    width: 50%;
+    font-size: 30px;
+  }
+}
