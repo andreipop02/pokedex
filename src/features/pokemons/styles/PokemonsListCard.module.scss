@@ -1,0 +1,94 @@
+@use "src/core/theme" as *;
+
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: color("secondaryColor");
+  width: 45%;
+  border-radius: 10px;
+  padding: 8px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 250px;
+  min-height: fit-content;
+
+  @media (min-width: getBreakpoint("desktop")) {
+    width: 22%;
+    height: 350px;
+  }
+}
+
+.linkContainer {
+  width: 100%;
+}
+
+.pokemonName {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 13px;
+
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 25px;
+  }
+}
+
+.pokemonImage {
+  height: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 90%;
+
+  @media (min-width: getBreakpoint("desktop")) {
+    height: 180px;
+    max-width: 70%;
+  }
+}
+
+.pokemonTypes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pokemonType {
+  background-color: color("listColor1");
+  border-radius: 10px;
+  padding: 3px 8px 3px 8px;
+  text-align: center;
+  font-size: 12px;
+
+  @media (min-width: getBreakpoint("desktop")) {
+    padding: 5px 11px 5px 11px;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+}
+
+.playButton {
+  width: 80%;
+  max-width: 250px;
+  margin-top: 10px;
+  padding: 5px 8px 5px 8px;
+  font-size: 12px;
+  &:disabled {
+    animation: pulse 0.5s infinite;
+  }
+  @media (min-width: getBreakpoint("desktop")) {
+    padding: 8px 5px 8px 5px;
+    font-size: 16px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 203, 5, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 203, 5, 0);
+  }
+}

@@ -1,0 +1,96 @@
+@use "src/core/theme" as *;
+
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainContainer {
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 3px solid white;
+  justify-content: space-between;
+  @media (min-width: getBreakpoint("desktop")) {
+    width: 50%;
+    max-width: 800px;
+    height: 30px;
+  }
+}
+
+.searchInput {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: color("mainTextColor");
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 18px;
+  }
+}
+
+.searchIconFadeIn {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  opacity: 0;
+  animation: fadeIn 0.5s linear forwards, pulse 2s infinite;
+  color: color("mainTextColor");
+  cursor: pointer;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 45px;
+  }
+}
+
+.searchIconFadeOut {
+  @extend .searchIconFadeIn;
+  opacity: 1;
+  animation: fadeOut 0.5s linear forwards;
+}
+
+.resetButton {
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: color("secondaryButtonColor");
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  @media (min-width: getBreakpoint("desktop")) {
+    font-size: 18px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 8px color("primaryColor"));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 8px rgba(255, 203, 5, 0));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
